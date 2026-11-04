@@ -5,3 +5,5 @@ Language: Python
 Group members: Marco Modestino, Matteo Muscat, Zihe Zhao, Christopher Chalmers
 
 Techniques: Likely one of LHDiff or W_BESTI_LINE
+
+Deadline: December 15th, may be extended
