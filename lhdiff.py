@@ -38,6 +38,11 @@ def find_unchanged_lines(old_lines: list[str], new_lines: list[str]) -> DiffResu
     return result
 
 
+def match_lines(old_lines: list[str], new_lines: list[str]) -> list[tuple[int, int]]:
+    """Return 1-based (old, new) line mappings for the two files."""
+    return find_unchanged_lines(old_lines, new_lines).matches
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Print old-new line pairs after normalizing case and whitespace."
@@ -54,8 +59,7 @@ def main() -> None:
     except (OSError, UnicodeError) as error:
         parser.error(str(error))
 
-    result = find_unchanged_lines(old_lines, new_lines)
-    for old_number, new_number in result.matches:
+    for old_number, new_number in match_lines(old_lines, new_lines):
         print(f"{old_number}-{new_number}")
 
 
