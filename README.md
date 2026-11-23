@@ -12,6 +12,8 @@ python3 lhdiff.py old.txt new.txt
 
 The command prints one mapping per line. For example, `4-5` maps line 4 in the old file to line 5 in the new file.
 
+In Python, `lhdiff.match_lines(old_lines, new_lines)` takes two lists of lines and returns 1-based `(old_line, new_line)` pairs.
+
 ## Progress
 
 - [x] Normalize case and whitespace, then use `difflib` to find unchanged lines in order and collect unmatched line numbers.
