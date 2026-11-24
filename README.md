@@ -23,6 +23,11 @@ In Python, `lhdiff.match_lines(old_lines, new_lines)` takes two lists of lines a
 
 ## Team
 
-Marco Modestino, Matteo Muscat, Zihe Zhao, and Christopher Chalmers.
+- **Marco Modestino** owns SimHash candidate search, match resolution, integration, existing benchmark setup, and the evaluation write-up.
+- **Matteo Muscat** owns content and context similarity scoring.
+- **Zihe Zhao** owns line split detection.
+- **Christopher Chalmers** owns the evaluation runner and its comparison of predicted and expected mappings.
+
+Everyone contributes labeled file pairs for the new dataset.
 
 The tentative deadline is December 15.
